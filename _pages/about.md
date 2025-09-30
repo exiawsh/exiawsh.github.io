@@ -46,7 +46,7 @@ Looking ahead, I am developing memory‑centric, self‑evolving AI agents capab
 
 [VideoITG: Multimodal Video Understanding with Instructed Temporal Grounding](https://arxiv.org/abs/2507.13353)
 
-**Shihao Wang** et al.
+**Shihao Wang**, Guo Chen, De-an Huang, Zhiqi Li, Minghan Li, Guilin Liu, Jose M. Alvarez, Lei Zhang and Zhiding Yu.
 
 arXiv 2025
 
@@ -58,9 +58,33 @@ arXiv 2025
 
 [Hydra-NeXt: Robust Closed-Loop Driving with Open-Loop Training](https://arxiv.org/abs/2503.12030)
 
-Zhenxin Li, **Shihao Wang** et al.
+Zhenxin Li,  **Shihao Wang**, Shiyi Lan, Zhiding Yu, Zuxuan Wu and Jose M. Alvarez.
 
 ICCV 2025
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NIPS 2025</div><img src='images/eagle2_5.png' alt="Eagle2.5" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Eagle 2.5: Boosting Long-Context Post-Training for Frontier Vision-Language Models](https://arxiv.org/abs/2504.15271)
+
+Guo Chen, Zhiqi Li, **Shihao Wang**, Jindong Jiang, Yicheng Liu, Lidong Lu, De-An Huang, Wonmin Byeon, Matthieu Le, Tuomas Rintamaki, Tyler Poon, Max Ehrlich, Tuomas Rintamaki, Tyler Poon, Tong Lu, Limin Wang, Bryan Catanzaro, Jan Kautz, Andrew Tao, Zhiding Yu, Guilin Liu
+
+NIPS 2025
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/eagle2.png' alt="Eagle2" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Eagle 2: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models](https://arxiv.org/abs/2501.14818)
+
+Zhiqi Li, Guo Chen, Shilong Liu, **Shihao Wang**, Vibashan VS, Yishen Ji, Shiyi Lan, Hao Zhang, Yilin Zhao, Subhashree Radhakrishnan, Nadine Chang, Karan Sapra, Amala Sanjay Deshmukh, Tuomas Rintamaki, Matthieu Le, Ilia Karmanov, Lukas Voegtle, Philipp Fischer, De-An Huang, Timo Roman, Tong Lu, Jose M. Alvarez, Bryan Catanzaro, Jan Kautz, Andrew Tao, Guilin Liu and Zhiding Yu.
+
+arXiv 2025
 
 </div>
 </div>
@@ -70,7 +94,8 @@ ICCV 2025
 
 [Eagle: Exploring the design space for multimodal llms with mixture of encoders](https://arxiv.org/abs/2408.15998)
 
-Min Shi, Fuxiao Liu, **Shihao Wang** et al.
+Min Shi, Fuxiao Liu, **Shihao Wang**, Shijia Liao, Subhashree Radhakrishnan, Yilin Zhao, De-An Huang, Hongxu Yin, 
+Karan Sapra, Yaser Yacoob, Humphrey Shi, Bryan Catanzaro, Andrew Tao, Jan Kautz, Zhiding Yu and Guilin Liu.
 
 ICLR 2025
 
@@ -82,7 +107,7 @@ ICLR 2025
 
 [OmniDrive: A holistic vision-language dataset for autonomous driving with counterfactual reasoning](https://arxiv.org/abs/2405.01533)
 
-**Shihao Wang**, Zhiding Yu, Xiaohui Jiang, Shiyi Lan, Min Shi, Nadine Chang, Jan Kautz, Ying Li, Jose M. Alvarez
+**Shihao Wang**, Zhiding Yu, Xiaohui Jiang, Shiyi Lan, Min Shi, Nadine Chang, Jan Kautz, Ying Li and Jose M. Alvarez.
 
 CVPR 2025
 
@@ -94,7 +119,7 @@ CVPR 2025
 
 [Far3D: Expanding the horizon for surround-view 3d object detection](https://arxiv.org/abs/2308.09616)
 
-Xiaohui Jiang, Shuanglin Li, Yingfei Liu, **Shihao Wang** et al.
+Xiaohui Jiang, Shuanglin Li, Yingfei Liu, **Shihao Wang**, Fan Jia, Tiancai Wang, Lijin Han and Xiangyu Zhang.
 
 AAAI 2024
 
@@ -106,7 +131,7 @@ AAAI 2024
 
 [StreamPETR: End-to-End Multi-View 3D Object Detection with Transformers](https://arxiv.org/abs/2303.11926)
 
-**Shihao Wang** et al.
+**Shihao Wang**, Yingfei Liu, Tiancai Wang, Ying Li and Xiangyu Zhang.
 
 ICCV 2023
 
