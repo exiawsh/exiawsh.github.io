@@ -51,6 +51,20 @@ Looking ahead, I am developing memory‑centric, self‑evolving AI agents capab
 arXiv 2025
 
 </div>
+
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Blog 2025</div><img src='images/groot.png' alt="Groot" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GR00T N1.5 An Improved Open Foundation Model for Generalist Humanoid Robots](https://research.nvidia.com/labs/gear/gr00t-n1_5/)
+
+Johan Bjorck, Valts Blukis, Fernando Castañeda, Nikita Cherniadev, Xingye Da, Runyu Ding, Linxi "Jim" Fan, Yu Fang, Dieter Fox, Fengyuan Hu, Spencer Huang, Joel Jang, Xiaowei Jiang, Kaushil Kundalia, Jan Kautz, Zhiqi Li, Kevin Lin, Zongyu Lin, Loic Magne, Yunze Man, Ajay Mandlekar, Avnish Narayan, Soroush Nasiriany, Scott Reed, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, **Shihao Wang**, Jiannan Xiang, Yuqi Xie, Yinzhen Xu, Seonghyeon Ye, Zhiding Yu, Yizhou Zhao, Zhe Zhang, Ruijie Zheng, Yuke Zhu
+
+Blog 2025
+
+</div>
+
 </div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/Hydra-Next.png' alt="Hydra-NeXt" width="100%"></div></div>
