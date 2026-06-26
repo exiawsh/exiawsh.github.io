@@ -21,7 +21,7 @@ redirect_from:
   <div class="hero__inner">
     <div class="hero__tag">E.F.S.F. LONDO BELL &nbsp;·&nbsp; NEWTYPE PILOT TERMINAL</div>
     <div class="hero__title">SHIHAO&nbsp;WANG</div>
-    <div class="hero__sub">Ph.D. Student @ HK PolyU &nbsp;//&nbsp; 3D Perception &middot; Multimodal Foundation Models &middot; Autonomous Driving</div>
+    <div class="hero__sub">Ph.D. Student @ HK PolyU &nbsp;//&nbsp; 3D Understanding &middot; Multimodal Foundation Models &middot; Embodied Intelligence</div>
     <div class="hero__scroll">▼ SCROLL TO ENGAGE</div>
   </div>
 </div>
@@ -29,9 +29,9 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 **Shihao Wang**  
-I am a second-year Ph.D. student in the Department of Computing at The Hong Kong Polytechnic University, advised by Prof. [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang/). My research spans 3D perception and planning for autonomous vehicles and robotics, multimodal foundation models, streaming video understanding, and test-time adaptation for agentic systems, with publications at top conferences including CVPR, ICCV, and AAAI. I also collaborate closely with NVIDIA Research and have contributed to both foundational multimodal models and autonomous driving systems.
+I am a second-year Ph.D. student in the Department of Computing at The Hong Kong Polytechnic University, advised by Prof. [Lei Zhang](https://www4.comp.polyu.edu.hk/~cslzhang/). My research spans 3D understanding and planning for embodied intelligence and robotics, multimodal foundation models, streaming video understanding, and test-time adaptation for agentic systems, with publications at top conferences including CVPR, ICCV, and AAAI. I also collaborate closely with NVIDIA Research and have contributed to both foundational multimodal models and embodied AI systems.
 
-My work includes the Eagle‑VLM series, powering NVIDIA’s commercial multimodal models and the Isaac GR00T humanoid robotics platform, as well as OmniDrive and Hydra‑MDP, which connect 3D perception with multimodal reasoning for end‑to‑end autonomous driving and have earned top awards at the CVPR 2024 Autonomous Driving Challenge. I am also the author of StreamPETR (ICCV’23), a streaming paradigm for camera‑based 3D perception that reached #1 among online methods on nuScenes and has been widely adopted in both academia and industry.
+My work includes the Eagle‑VLM series, powering NVIDIA’s commercial multimodal models and the Isaac GR00T humanoid robotics platform, as well as OmniDrive and Hydra‑MDP, which connect 3D understanding with multimodal reasoning for end‑to‑end driving and planning and have earned top awards at the CVPR 2024 Autonomous Driving Challenge. I am also the author of StreamPETR (ICCV’23), a streaming paradigm for camera‑based 3D understanding that reached #1 among online methods on nuScenes and has been widely adopted in both academia and industry.
 
 Looking ahead, I am developing memory‑centric, self‑evolving AI agents capable of persistent long‑horizon reasoning across virtual and physical domains, aiming to push beyond task‑specific solutions toward truly reliable general‑purpose autonomy.
 
