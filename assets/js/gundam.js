@@ -220,19 +220,6 @@
       setTimeout(function () { if (boot.parentNode) boot.parentNode.removeChild(boot); }, 700);
       document.removeEventListener("keydown", close);
       boot.removeEventListener("click", close);
-
-      // Dramatic Trans-Am flare on first open, then settle back to normal mode
-      // (Trans-Am is a temporary overdrive in canon).
-      if (!reduceMotion && !document.body.classList.contains("trans-am")) {
-        setTimeout(function () {
-          setTransAm(true, { transient: true });
-          if (initCockpit._refresh) initCockpit._refresh();
-          setTimeout(function () {
-            setTransAm(false, { transient: true });
-            if (initCockpit._refresh) initCockpit._refresh();
-          }, 4200);
-        }, 600);
-      }
     }
     document.addEventListener("keydown", close);
     boot.addEventListener("click", close);
