@@ -483,6 +483,166 @@ body::after {
 .page__content img[src*="shields"] { filter: drop-shadow(0 0 6px var(--g-accent-soft)); }
 
 /* ==========================================================================
+   MOBILE SUIT ARCHIVE  ->  official PV hangar (lite YouTube embeds)
+   ========================================================================== */
+.ms-intro {
+  font-family: "Share Tech Mono", monospace !important;
+  font-size: 0.82em !important;
+  color: var(--g-dim) !important;
+  letter-spacing: 0.5px;
+  margin-top: 0.4em !important;
+}
+.ms-intro a { color: var(--g-accent) !important; }
+
+.ms-archive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+  margin: 1.4em 0 0.6em;
+}
+@media (max-width: 900px) { .ms-archive { grid-template-columns: 1fr; max-width: 520px; } }
+
+.ms-card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(12, 19, 34, 0.92), rgba(7, 11, 22, 0.96));
+  border: 1px solid rgba(120, 160, 255, 0.22);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  overflow: hidden;
+  /* per-card accent (overridden per series below) */
+  --ms-accent: var(--g-accent);
+}
+.ms-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ms-accent);
+  box-shadow: 0 12px 34px rgba(0,0,0,0.55), 0 0 24px color-mix(in srgb, var(--ms-accent) 40%, transparent);
+}
+
+/* series colours */
+.ms-card.ms-uc   { --ms-accent: var(--g-yellow); }
+.ms-card.ms-seed { --ms-accent: var(--g-red); }
+.ms-card.ms-00   { --ms-accent: var(--g-gn); }
+body.trans-am .ms-card { --ms-accent: var(--g-red); }
+
+.ms-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #04060d;
+  cursor: pointer;
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in srgb, var(--ms-accent) 50%, transparent);
+}
+.ms-thumb {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+  filter: saturate(1.05) contrast(1.03);
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+.ms-card:hover .ms-thumb { transform: scale(1.06); filter: saturate(1.2) contrast(1.06) brightness(1.05); }
+.ms-media::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(4,6,13,0.05), rgba(4,6,13,0.55));
+  transition: background 0.2s;
+}
+.ms-card:hover .ms-media::after { background: linear-gradient(180deg, rgba(4,6,13,0), rgba(4,6,13,0.3)); }
+
+/* HUD corner ticks on the cover */
+.ms-corner {
+  position: absolute; z-index: 3;
+  width: 18px; height: 18px;
+  border: 2px solid var(--ms-accent);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 5px var(--ms-accent));
+  transition: all 0.2s ease;
+}
+.ms-corner.tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.ms-corner.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+.ms-card:hover .ms-corner { width: 24px; height: 24px; }
+
+/* moving scan line over the cover */
+.ms-scan {
+  position: absolute; left: 0; right: 0; top: 0; height: 2px;
+  background: var(--ms-accent);
+  box-shadow: 0 0 12px var(--ms-accent);
+  opacity: 0.7; z-index: 3;
+  animation: msScan 3.2s linear infinite;
+}
+@keyframes msScan { 0% { top: 0; } 50% { top: calc(100% - 2px); } 100% { top: 0; } }
+
+.ms-play {
+  position: absolute; z-index: 4;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 54px; height: 54px;
+  border: 2px solid var(--ms-accent);
+  background: rgba(4, 6, 13, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--ms-accent) 45%, transparent);
+}
+.ms-play::before {
+  content: "";
+  position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%);
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent var(--ms-accent);
+}
+.ms-play::after {
+  content: "";
+  position: absolute; inset: -7px;
+  border: 1px solid var(--ms-accent);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: msPulse 2.2s ease-out infinite;
+}
+@keyframes msPulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(1.55); opacity: 0; } }
+.ms-card:hover .ms-play { background: var(--ms-accent); transform: translate(-50%, -50%) scale(1.08); box-shadow: 0 0 26px var(--ms-accent); }
+.ms-card:hover .ms-play::before { border-left-color: #04060d; }
+
+.ms-media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 5; }
+
+.ms-info { padding: 0.9em 1em 1.1em; }
+.ms-tag {
+  display: inline-block;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.66em; letter-spacing: 1.5px;
+  color: #04060d;
+  background: var(--ms-accent);
+  padding: 2px 8px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--ms-accent) 40%, transparent);
+}
+.ms-name {
+  font-family: "Orbitron", sans-serif !important;
+  font-weight: 800;
+  color: var(--g-white) !important;
+  margin: 0.5em 0 0.3em !important;
+  letter-spacing: 1px;
+  font-size: 1.15em;
+  text-shadow: 0 0 14px color-mix(in srgb, var(--ms-accent) 35%, transparent);
+}
+.ms-desc {
+  font-size: 0.82em !important;
+  color: var(--g-text) !important;
+  line-height: 1.55 !important;
+  margin: 0 0 0.7em !important;
+}
+.ms-link {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: var(--ms-accent) !important;
+  border-bottom: none !important;
+  text-shadow: none !important;
+}
+.ms-link:hover { color: var(--g-white) !important; background: transparent !important; }
+
+/* ==========================================================================
    TRANS-AM toggle button
    ========================================================================== */
 #trans-am-btn {
@@ -579,3 +739,238 @@ body.trans-am #trans-am-btn { animation: gShake 0.5s; }
   border-top: 1px solid rgba(47, 243, 207, 0.2);
 }
 .page__footer a { color: var(--g-accent) !important; }
+
+/* ==========================================================================
+   COCKPIT DASHBOARD  ::  mobile-suit panoramic cockpit instrument console
+   ========================================================================== */
+/* the old floating button is superseded by the console TRANS-AM lever */
+#trans-am-btn { display: none !important; }
+
+/* leave room so content never hides under the console */
+#main { padding-bottom: 132px; }
+@media (max-width: 600px) { #main { padding-bottom: 150px; } }
+
+#cockpit {
+  position: fixed; inset: 0;
+  z-index: 9970;
+  pointer-events: none;
+  font-family: "Share Tech Mono", monospace;
+}
+
+/* central targeting reticle (subtle; flares during Trans-Am) */
+.cp-reticle {
+  position: absolute; left: 50%; top: 46%;
+  width: 220px; height: 220px;
+  transform: translate(-50%, -50%);
+  opacity: 0.12;
+  transition: opacity 0.5s ease;
+}
+.cp-reticle::before, .cp-reticle::after {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--g-accent);
+  border-radius: 50%;
+}
+.cp-reticle::before { width: 100%; height: 100%; border-style: dashed; animation: gSpin 30s linear infinite; }
+.cp-reticle::after { width: 36%; height: 36%; }
+.cp-reticle b {
+  position: absolute; left: 50%; top: 50%; width: 70%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--g-accent), transparent);
+  transform: translate(-50%, -50%);
+}
+.cp-reticle b.v { width: 1px; height: 70%; background: linear-gradient(180deg, transparent, var(--g-accent), transparent); }
+body.trans-am .cp-reticle { opacity: 0.4; }
+@media (max-width: 900px) { .cp-reticle { display: none; } }
+
+/* ---- bottom console ---- */
+.cp-console {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 104px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 16px;
+  background:
+    linear-gradient(180deg, rgba(8,12,24,0.25), rgba(5,8,16,0.97) 42%);
+  border-top: 1px solid color-mix(in srgb, var(--g-accent) 60%, transparent);
+  box-shadow: 0 -8px 34px rgba(0,0,0,0.65), 0 1px 0 color-mix(in srgb, var(--g-accent) 30%, transparent) inset;
+  -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px);
+  pointer-events: auto;
+  overflow: hidden;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  clip-path: polygon(0 14px, 26px 0, calc(100% - 26px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+body.trans-am .cp-console {
+  border-top-color: var(--g-red);
+  box-shadow: 0 -8px 40px rgba(255,30,45,0.45), 0 1px 0 rgba(255,80,90,0.4) inset;
+}
+@media (max-width: 600px) { .cp-console { height: 78px; gap: 6px; padding: 0 8px; } }
+
+.cp-panel {
+  height: 80px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  gap: 4px; padding: 6px 12px;
+  border: 1px solid rgba(120,160,255,0.18);
+  background: rgba(10,16,30,0.55);
+  clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 9px 100%, 0 calc(100% - 9px));
+  flex: 0 0 auto;
+}
+.cp-label { font-size: 9px; letter-spacing: 2px; color: var(--g-dim); white-space: nowrap; }
+.cp-readout { font-size: 12px; color: var(--g-accent); text-shadow: 0 0 8px var(--g-accent); white-space: nowrap; }
+
+/* circular GN-output gauge */
+.cp-gauge { position: relative; width: 50px; height: 50px; }
+.cp-gauge .ring {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: conic-gradient(var(--g-accent) calc(var(--val, 60) * 1%), rgba(255,255,255,0.07) 0);
+  -webkit-mask: radial-gradient(transparent 55%, #000 57%);
+          mask: radial-gradient(transparent 55%, #000 57%);
+  transition: background 0.7s ease;
+  filter: drop-shadow(0 0 6px var(--g-accent));
+}
+.cp-gauge .num { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--g-white); }
+
+/* particle energy bars */
+.cp-bars { display: flex; gap: 3px; align-items: flex-end; height: 44px; }
+.cp-bars i {
+  width: 6px; display: block; align-self: flex-end;
+  background: linear-gradient(var(--g-accent), color-mix(in srgb, var(--g-accent) 40%, transparent));
+  box-shadow: 0 0 6px var(--g-accent);
+  animation: cpBar 1.3s ease-in-out infinite;
+}
+.cp-bars i:nth-child(2) { animation-delay: .18s; }
+.cp-bars i:nth-child(3) { animation-delay: .36s; }
+.cp-bars i:nth-child(4) { animation-delay: .54s; }
+.cp-bars i:nth-child(5) { animation-delay: .72s; }
+@keyframes cpBar { 0%, 100% { height: 28%; } 50% { height: 100%; } }
+body.trans-am .cp-bars i { animation-duration: 0.5s; }
+
+/* radar scope */
+.cp-radar {
+  position: relative; width: 58px; height: 58px; border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--g-accent) 50%, transparent);
+  overflow: hidden;
+  background:
+    radial-gradient(circle, transparent 58%, color-mix(in srgb, var(--g-accent) 10%, transparent)),
+    repeating-radial-gradient(circle, rgba(120,160,255,0.10) 0 1px, transparent 1px 9px);
+}
+.cp-radar::before {
+  content: ""; position: absolute; inset: 0;
+  background: conic-gradient(from 0deg, color-mix(in srgb, var(--g-accent) 60%, transparent), transparent 32%);
+  animation: gSpin 2.6s linear infinite;
+}
+body.trans-am .cp-radar::before { animation-duration: 0.9s; }
+.cp-radar .blip { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: var(--g-accent); box-shadow: 0 0 8px var(--g-accent); animation: gPulse 1.6s ease-in-out infinite; }
+.cp-radar .blip.b1 { left: 60%; top: 35%; }
+.cp-radar .blip.b2 { left: 32%; top: 62%; animation-delay: .6s; }
+
+/* warning lamps */
+.cp-lamps { display: flex; gap: 9px; }
+.cp-lamp { width: 13px; height: 13px; border-radius: 50%; background: #1a2640; box-shadow: inset 0 0 5px #000, 0 0 0 1px rgba(120,160,255,0.2); }
+.cp-lamp.on { background: var(--c); box-shadow: 0 0 12px var(--c), inset 0 0 4px rgba(255,255,255,0.4); animation: cpBlink 1.5s steps(1) infinite; }
+@keyframes cpBlink { 50% { opacity: 0.3; } }
+body.trans-am .cp-lamp { background: var(--g-red) !important; box-shadow: 0 0 14px var(--g-red) !important; animation: cpBlink 0.4s steps(1) infinite; }
+
+/* central TRANS-AM lever */
+.cp-transam { margin: 0 auto; text-align: center; pointer-events: auto; flex: 0 0 auto; }
+.cp-transam button {
+  font-family: "Orbitron", sans-serif; font-weight: 800; letter-spacing: 3px; font-size: 13px;
+  color: var(--g-accent); background: rgba(8,12,24,0.7);
+  border: 1px solid var(--g-accent); padding: 11px 22px; cursor: pointer;
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  box-shadow: 0 0 16px var(--g-accent-soft); transition: all 0.2s ease;
+  text-shadow: 0 0 10px var(--g-accent);
+}
+.cp-transam button:hover { background: var(--g-accent); color: #04060d; box-shadow: 0 0 28px var(--g-accent); text-shadow: none; }
+body.trans-am .cp-transam button { color: #04060d; background: var(--g-red); border-color: var(--g-red); box-shadow: 0 0 26px var(--g-red); text-shadow: none; animation: cpBlink 0.6s steps(1) infinite; }
+.cp-transam .st { display: block; font-family: "Share Tech Mono", monospace; font-size: 8px; letter-spacing: 2px; margin-top: 5px; color: var(--g-dim); }
+body.trans-am .cp-transam .st { color: var(--g-red); }
+
+/* system message ticker */
+.cp-ticker {
+  flex: 1 1 auto; min-width: 40px; overflow: hidden; white-space: nowrap;
+  font-size: 11px; letter-spacing: 1px; color: var(--g-accent);
+  text-shadow: 0 0 6px var(--g-accent);
+  -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.cp-ticker span { display: inline-block; padding-left: 100%; animation: cpTick 18s linear infinite; }
+@keyframes cpTick { to { transform: translateX(-100%); } }
+body.trans-am .cp-ticker span { animation-duration: 7s; }
+
+@media (max-width: 1100px) { .cp-hide-lg { display: none !important; } }
+@media (max-width: 820px)  { .cp-hide-md { display: none !important; } }
+@media (max-width: 600px)  {
+  .cp-hide-sm { display: none !important; }
+  .cp-panel { height: 60px; padding: 4px 8px; }
+  .cp-transam button { padding: 9px 16px; font-size: 11px; }
+  .cp-console { justify-content: center; gap: 16px; }
+  .cp-transam { margin: 0; }
+}
+
+/* ==========================================================================
+   TRANS-AM activation BURST + sustained aura
+   ========================================================================== */
+#trans-am-aura {
+  position: fixed; inset: 0; z-index: 9968; pointer-events: none;
+  opacity: 0; transition: opacity 0.8s ease;
+  box-shadow: inset 0 0 200px 24px rgba(255, 30, 50, 0.42);
+  background: radial-gradient(ellipse at 50% 48%, transparent 58%, rgba(120, 0, 12, 0.30) 100%);
+}
+body.trans-am #trans-am-aura { opacity: 1; animation: taAura 2.4s ease-in-out infinite; }
+@keyframes taAura { 0%, 100% { opacity: 0.6; } 50% { opacity: 0.95; } }
+
+body.trans-am::after {
+  background: linear-gradient(to bottom, transparent, rgba(255, 45, 60, 0.09) 50%, transparent) !important;
+  background-size: 100% 5px !important;
+  animation-duration: 3s !important;
+  opacity: 0.85 !important;
+}
+
+#trans-am-fx { position: fixed; inset: 0; z-index: 99998; pointer-events: none; overflow: hidden; }
+#trans-am-fx .ta-flash {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 48%, rgba(255,120,130,0.95), rgba(230,12,40,0.55) 38%, rgba(120,0,12,0) 72%);
+  animation: taFlash 1.0s ease-out forwards;
+}
+@keyframes taFlash { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 0; } }
+#trans-am-fx .ta-ring {
+  position: absolute; left: 50%; top: 48%;
+  width: 44px; height: 44px; border: 3px solid rgba(255,120,130,0.95);
+  border-radius: 50%; transform: translate(-50%, -50%) scale(0);
+  box-shadow: 0 0 40px rgba(255,60,75,0.9);
+  animation: taRing 1.3s ease-out forwards;
+}
+#trans-am-fx .ta-ring.r2 { animation-delay: 0.16s; border-color: rgba(255,200,120,0.85); }
+#trans-am-fx .ta-ring.r3 { animation-delay: 0.34s; border-color: rgba(255,255,255,0.7); }
+@keyframes taRing { 0% { transform: translate(-50%, -50%) scale(0); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(40); opacity: 0; } }
+#trans-am-fx .ta-text {
+  position: absolute; left: 0; right: 0; top: 40%; text-align: center;
+  font-family: "Orbitron", sans-serif; font-weight: 900;
+  letter-spacing: 10px; font-size: clamp(2.2rem, 10vw, 6.5rem);
+  color: #fff; text-shadow: 0 0 30px #ff2b3a, 0 0 70px #ff2b3a, 0 0 12px #fff;
+  animation: taText 1.9s cubic-bezier(.16,.85,.2,1) forwards;
+}
+#trans-am-fx .ta-sub {
+  display: block; font-size: 0.2em; letter-spacing: 8px; margin-top: 0.4em;
+  color: #ffd0d4; text-shadow: 0 0 16px #ff2b3a;
+}
+@keyframes taText {
+  0% { opacity: 0; transform: scale(1.7); letter-spacing: 42px; filter: blur(10px); }
+  18% { opacity: 1; transform: scale(1); letter-spacing: 10px; filter: blur(0); }
+  72% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.06); }
+}
+body.ta-shake #main, body.ta-shake .masthead, body.ta-shake #cockpit {
+  animation: taShake 0.6s ease-in-out;
+}
+@keyframes taShake {
+  10% { transform: translate(-4px, 2px); } 20% { transform: translate(5px, -3px); }
+  30% { transform: translate(-6px, 1px); } 40% { transform: translate(4px, 4px); }
+  50% { transform: translate(-3px, -2px); } 60% { transform: translate(5px, 1px); }
+  70% { transform: translate(-4px, -1px); } 80% { transform: translate(3px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-bars i, .cp-radar::before, .cp-lamp.on, .cp-ticker span,
+  #trans-am-aura, .cp-reticle::before { animation: none !important; }
+}
