@@ -137,6 +137,17 @@
   }
 
   /* --------------------------------------------------------------------------
+     1b. HERO -> lift the banner above the two-column #main (full width)
+     -------------------------------------------------------------------------- */
+  function initHero() {
+    var hero = document.getElementById("hero");
+    var main = document.getElementById("main");
+    if (hero && main && main.parentNode && hero.parentNode !== main.parentNode) {
+      main.parentNode.insertBefore(hero, main);
+    }
+  }
+
+  /* --------------------------------------------------------------------------
      2. HUD FRAME + LIVE READOUT
      -------------------------------------------------------------------------- */
   function initHud() {
@@ -403,6 +414,7 @@
   }
 
   onReady(function () {
+    try { initHero(); } catch (e) {}
     try { initBackground(); } catch (e) {}
     try { initHud(); } catch (e) {}
     try { initCockpit(); } catch (e) {}

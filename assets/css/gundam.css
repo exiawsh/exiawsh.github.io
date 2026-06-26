@@ -211,6 +211,114 @@ body::after {
 #main { animation: gFadeIn 0.6s both; }
 
 /* ==========================================================================
+   HERO  ::  VCLab-style full-bleed banner with background image
+   Drop your own (rights-cleared) wallpaper at  images/hero-bg.jpg
+   and it will automatically replace the cosmic default.
+   ========================================================================== */
+/* hero is relocated by JS to sit above the two-column #main (full width) */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.5em;
+  min-height: 80vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in srgb, var(--g-accent) 45%, transparent);
+}
+.hero__bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    url("../../images/hero-bg.jpg"),
+    radial-gradient(ellipse at 72% 18%, rgba(45,108,255,0.40), transparent 55%),
+    radial-gradient(ellipse at 18% 88%, rgba(47,243,207,0.30), transparent 55%),
+    radial-gradient(ellipse at 50% 50%, rgba(18,28,58,0.65), #04060d 80%),
+    linear-gradient(180deg, #060a16, #04060d);
+  background-size: cover, auto, auto, auto, auto;
+  background-position: center, center, center, center, center;
+  background-repeat: no-repeat;
+  filter: saturate(1.05);
+  transform: scale(1.04);
+  animation: heroDrift 26s ease-in-out infinite alternate;
+}
+@keyframes heroDrift { from { transform: scale(1.04) translate(0,0); } to { transform: scale(1.12) translate(-1.5%, -1%); } }
+/* darken for legibility + scanline */
+.hero__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4,6,13,0.45) 0%, rgba(4,6,13,0.25) 40%, rgba(4,6,13,0.92) 100%),
+    linear-gradient(90deg, rgba(4,6,13,0.55), transparent 45%);
+}
+body.trans-am .hero__bg { filter: saturate(1.1) hue-rotate(-12deg) brightness(0.92); }
+body.trans-am .hero__bg::after { background: linear-gradient(180deg, rgba(20,2,6,0.5), rgba(60,4,10,0.35) 40%, rgba(8,2,4,0.94) 100%); }
+
+/* engineering grid sweep on top of the image */
+.hero__grid {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(120,160,255,0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,160,255,0.10) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at 50% 60%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 60%, #000 0%, transparent 78%);
+}
+.hero__inner {
+  position: relative; z-index: 2;
+  padding: 0 1.4em;
+  max-width: 1100px; margin: 0 auto; width: 100%;
+  animation: gFadeIn 0.8s both; animation-delay: 0.15s;
+}
+.hero__tag {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px; letter-spacing: 4px;
+  color: var(--g-accent);
+  text-shadow: 0 0 10px var(--g-accent);
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+.hero__title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.98;
+  color: var(--g-white);
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px color-mix(in srgb, var(--g-accent) 55%, transparent), 0 4px 30px rgba(0,0,0,0.6);
+  margin: 0;
+}
+.hero__title::before {
+  content: ""; display: inline-block;
+  width: 14px; height: clamp(2.4rem, 7vw, 5rem);
+  background: var(--g-accent);
+  box-shadow: 0 0 18px var(--g-accent);
+  margin-right: 18px; vertical-align: -0.12em;
+}
+.hero__sub {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
+  color: var(--g-text);
+  letter-spacing: 0.5px;
+  margin-top: 18px; padding-left: 4px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+.hero__scroll {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px; letter-spacing: 3px;
+  color: var(--g-accent);
+  margin-top: 34px; padding-left: 4px;
+  opacity: 0.85;
+  animation: heroBob 1.8s ease-in-out infinite;
+}
+@keyframes heroBob { 0%,100% { transform: translateY(0); opacity: 0.85; } 50% { transform: translateY(6px); opacity: 0.45; } }
+
+@media (max-width: 768px) {
+  .hero { min-height: 60vh; margin-bottom: 1.6em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg, .hero__scroll { animation: none !important; }
+}
+
+/* ==========================================================================
    SIDEBAR  ->  PILOT DATA PANEL
    ========================================================================== */
 .sidebar { color: var(--g-text); }

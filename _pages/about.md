@@ -15,6 +15,17 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+<div class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__grid"></div>
+  <div class="hero__inner">
+    <div class="hero__tag">E.F.S.F. // CELESTIAL BEING &nbsp;·&nbsp; PILOT TERMINAL</div>
+    <div class="hero__title">SHIHAO&nbsp;WANG</div>
+    <div class="hero__sub">Ph.D. Student @ HK PolyU &nbsp;//&nbsp; 3D Perception &middot; Multimodal Foundation Models &middot; Autonomous Driving</div>
+    <div class="hero__scroll">▼ SCROLL TO ENGAGE</div>
+  </div>
+</div>
+
 <span class='anchor' id='about-me'></span>
 
 **Shihao Wang**  
@@ -177,58 +188,4 @@ ICCV 2023
   - Research Intern, AV Applied Research Group. Contributed to Eagle VLM family, VideoITG, HydraMDP, OmniDrive, GR00T N1.5.
 - *2022.04 - 2023.07*, [MEGVII Technology](https://megvii.com/), Beijing, China.  
   - Research Intern, Foundation Model Group (PI: [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en)). Developed StreamPETR, Far3D, etc.
-
-<span class='anchor' id='gundam'></span>
-# 🤖 Mobile Suit Archive
-
-<p class="ms-intro">// Off-duty protocol — my favorite Mobile Suits. Official PVs &amp; episodes streamed from the <a href="https://www.youtube.com/@GundamInfo" target="_blank" rel="noopener">GUNDAM CHANNEL INTL</a> (official). Select a unit to deploy.</p>
-
-<div class="ms-archive">
-
-  <div class="ms-card ms-uc" data-yt="mAxCyrDuNiA">
-    <div class="ms-media">
-      <img class="ms-thumb" src="https://i.ytimg.com/vi/mAxCyrDuNiA/maxresdefault.jpg" alt="Nu Gundam — Char's Counterattack official video" loading="lazy">
-      <span class="ms-corner tl"></span><span class="ms-corner br"></span>
-      <span class="ms-scan"></span>
-      <button type="button" class="ms-play" aria-label="Play official video"></button>
-    </div>
-    <div class="ms-info">
-      <span class="ms-tag">U.C. 0093 // E.F.S.F.</span>
-      <h3 class="ms-name">ν GUNDAM</h3>
-      <p class="ms-desc">Char's Counterattack — Amuro Ray and the Psyco-Frame. The Universal Century classic.</p>
-      <a class="ms-link" href="https://en.gundam-official.com/feature/GWOY/" target="_blank" rel="noopener">OFFICIAL SITE ▸</a>
-    </div>
-  </div>
-
-  <div class="ms-card ms-seed" data-yt="wzgS_8LBmlg">
-    <div class="ms-media">
-      <img class="ms-thumb" src="https://i.ytimg.com/vi/wzgS_8LBmlg/maxresdefault.jpg" alt="Gundam SEED FREEDOM official trailer" loading="lazy">
-      <span class="ms-corner tl"></span><span class="ms-corner br"></span>
-      <span class="ms-scan"></span>
-      <button type="button" class="ms-play" aria-label="Play official video"></button>
-    </div>
-    <div class="ms-info">
-      <span class="ms-tag">C.E. 75 // COSMIC ERA</span>
-      <h3 class="ms-name">GUNDAM SEED</h3>
-      <p class="ms-desc">SEED FREEDOM — Kira Yamato, Phase Shift and wings of light. The Cosmic Era saga.</p>
-      <a class="ms-link" href="https://en.gundam-official.com/seed/freedom/" target="_blank" rel="noopener">OFFICIAL SITE ▸</a>
-    </div>
-  </div>
-
-  <div class="ms-card ms-00" data-yt="7jLv_j-m8F4">
-    <div class="ms-media">
-      <img class="ms-thumb" src="https://i.ytimg.com/vi/7jLv_j-m8F4/maxresdefault.jpg" alt="Mobile Suit Gundam 00 official episode" loading="lazy">
-      <span class="ms-corner tl"></span><span class="ms-corner br"></span>
-      <span class="ms-scan"></span>
-      <button type="button" class="ms-play" aria-label="Play official video"></button>
-    </div>
-    <div class="ms-info">
-      <span class="ms-tag">A.D. 2307 // CELESTIAL BEING</span>
-      <h3 class="ms-name">GUNDAM 00</h3>
-      <p class="ms-desc">Setsuna F. Seiei, GN particles and Trans-Am. Armed interventions to eradicate war.</p>
-      <a class="ms-link" href="https://en.gundam.info/" target="_blank" rel="noopener">OFFICIAL SITE ▸</a>
-    </div>
-  </div>
-
-</div>
 
