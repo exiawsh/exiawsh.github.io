@@ -19,7 +19,7 @@ redirect_from:
   <div class="hero__bg"></div>
   <div class="hero__grid"></div>
   <div class="hero__inner">
-    <div class="hero__tag">E.F.S.F. // CELESTIAL BEING &nbsp;·&nbsp; PILOT TERMINAL</div>
+    <div class="hero__tag">E.F.S.F. LONDO BELL &nbsp;·&nbsp; NEWTYPE PILOT TERMINAL</div>
     <div class="hero__title">SHIHAO&nbsp;WANG</div>
     <div class="hero__sub">Ph.D. Student @ HK PolyU &nbsp;//&nbsp; 3D Perception &middot; Multimodal Foundation Models &middot; Autonomous Driving</div>
     <div class="hero__scroll">▼ SCROLL TO ENGAGE</div>
@@ -188,4 +188,160 @@ ICCV 2023
   - Research Intern, AV Applied Research Group. Contributed to Eagle VLM family, VideoITG, HydraMDP, OmniDrive, GR00T N1.5.
 - *2022.04 - 2023.07*, [MEGVII Technology](https://megvii.com/), Beijing, China.  
   - Research Intern, Foundation Model Group (PI: [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en)). Developed StreamPETR, Far3D, etc.
+
+<span class='anchor' id='mobile-suits'></span>
+# 🤖 Mobile Suit Gallery
+<p class="ms-intro">// PERSONAL HANGAR &nbsp;·&nbsp; FAVOURITE MOBILE SUITS ACROSS <b>U.C.</b> / <b>C.E.</b> / <b>A.D.</b> &nbsp;·&nbsp; CLICK A FRAME TO OPEN FULL RESOLUTION</p>
+
+<div class="ms-era ms-era-uc"><span>U.C.</span> UNIVERSAL CENTURY <em>// Newtype &middot; Psycho-Frame</em></div>
+
+<div class="ms-archive">
+
+  <div class="ms-card ms-uc">
+    <a class="ms-media" href="images/gundam-backgrounds-all/nu-gundam-peakpx-original.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/nu-uc.jpg" alt="RX-93 Nu Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // RX-93</span>
+      <div class="ms-name">ν Gundam</div>
+      <p class="ms-desc">Amuro Ray's masterpiece — fin funnels deployed, the Psycho-Frame miracle that pushed back Axis.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-uc">
+    <a class="ms-media" href="images/gundam-backgrounds-all/hi-nu-gundam-peakpx-original.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/hinu-uc.jpg" alt="RX-93-ν2 Hi-Nu Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // RX-93-ν2</span>
+      <div class="ms-name">Hi-ν Gundam</div>
+      <p class="ms-desc">Amuro's perfected ν — refined Psycho-Frame and a full fin-funnel array. The pilot's ideal machine.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-uc ms-zeon">
+    <a class="ms-media" href="images/gundam-backgrounds-all/sazabi-alphacoders-6000x3803.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/sazabi-uc.jpg" alt="MSN-04 Sazabi" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // MSN-04</span>
+      <div class="ms-name">Sazabi</div>
+      <p class="ms-desc">Char Aznable's crimson flagship — Neo Zeon's finest Newtype mobile suit, funnels and beam shot blazing.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-uc ms-zeon">
+    <a class="ms-media" href="images/gundam-backgrounds-all/sazabi-chars-counterattack-alphacoders-4000x3250.png" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/nightingale-uc.jpg" alt="MSN-04II Nightingale" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // MSN-04II</span>
+      <div class="ms-name">Nightingale</div>
+      <p class="ms-desc">The colossal mobile-armour evolution of Sazabi — Char's machine from Beltorchika's Children.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-uc">
+    <a class="ms-media" href="images/gundam-backgrounds-all/zeta-gundam-peakpx-original.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/zeta-uc.jpg" alt="MSZ-006 Zeta Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // MSZ-006</span>
+      <div class="ms-name">Zeta Gundam</div>
+      <p class="ms-desc">Kamille Bidan's transformable Gundam — Waverider assault, the symbol of the Gryps Conflict.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-uc">
+    <a class="ms-media" href="images/gundam-backgrounds-all/uc-rx0-unicorn-4kwallpapers-3840x2160.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/unicorn-uc.jpg" alt="RX-0 Unicorn Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">U.C. // RX-0</span>
+      <div class="ms-name">Unicorn Gundam</div>
+      <p class="ms-desc">NT-D Destroy Mode — Psycho-Frame fully deployed. The "possibility of the universe".</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="ms-era ms-era-seed"><span>C.E.</span> COSMIC ERA <em>// Mobile Suit Gundam SEED</em></div>
+
+<div class="ms-archive">
+
+  <div class="ms-card ms-seed">
+    <a class="ms-media" href="images/gundam-backgrounds-all/seed-freedom-4kwallpapers-5120x2880.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/freedom-seed.jpg" alt="ZGMF-X10A Freedom Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">C.E. // ZGMF-X10A</span>
+      <div class="ms-name">Freedom Gundam</div>
+      <p class="ms-desc">Five weapons fired at once under the Multi Lock-on System. Kira Yamato's wings of peace.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-seed">
+    <a class="ms-media" href="images/gundam-backgrounds-all/infinite-justice-pixiewall-y149az-3840x2160.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/justice-seed.jpg" alt="ZGMF-X19A Infinite Justice Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">C.E. // ZGMF-X19A</span>
+      <div class="ms-name">Infinite Justice</div>
+      <p class="ms-desc">Athrun Zala's crimson knight — beam blades and the Fatum-01 lifter at full thrust.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-seed">
+    <a class="ms-media" href="images/gundam-backgrounds-all/destiny-peakpx-original.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/destiny-seed.jpg" alt="ZGMF-X42S Destiny Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">C.E. // ZGMF-X42S</span>
+      <div class="ms-name">Destiny Gundam</div>
+      <p class="ms-desc">Wings of Light unfolded — Shinn Asuka charging with the Arondight beam sword.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="ms-era ms-era-00"><span>A.D.</span> ANNO DOMINI <em>// Mobile Suit Gundam 00 &middot; GN Particles</em></div>
+
+<div class="ms-archive">
+
+  <div class="ms-card ms-00">
+    <a class="ms-media" href="images/gundam-backgrounds-all/00-gundam-4kwallpapers-5120x2880-14915.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/00-gundam.jpg" alt="GN-0000 00 Gundam" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">A.D. // GN-0000</span>
+      <div class="ms-name">00 Gundam</div>
+      <p class="ms-desc">Twin Drive System synchronized — Setsuna F. Seiei's bond between two GN Drives.</p>
+    </div>
+  </div>
+
+  <div class="ms-card ms-00">
+    <a class="ms-media" href="images/gundam-backgrounds-all/00q-quantum-burst-peakpx-original.jpg" target="_blank" rel="noopener">
+      <img class="ms-thumb" src="images/gundam/00qant-00.jpg" alt="GNT-0000 00 Qan[T]" loading="lazy">
+      <span class="ms-corner tl"></span><span class="ms-corner br"></span><span class="ms-scan"></span>
+    </a>
+    <div class="ms-info">
+      <span class="ms-tag">A.D. // GNT-0000</span>
+      <div class="ms-name">00 Qan[T]</div>
+      <p class="ms-desc">Quantum Burst — GN Sword Bits spread for pure-particle dialogue across space.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="ms-credits">Wallpapers used for personal decoration only. Gundam and all mobile suit designs &copy; Sotsu &middot; Sunrise / Bandai Namco. All rights belong to their respective owners. &nbsp;//&nbsp; Site background: Milky Way panorama &copy; ESO / S. Brunier (CC BY 4.0).</p>
 

@@ -45,28 +45,37 @@
       build();
     }
 
+    // realistic stellar colours (blue-white -> white -> warm), weighted to white
+    var STAR_COLS = ["#cfe0ff", "#dbe7ff", "#ffffff", "#ffffff", "#fff6e8", "#ffe9c9", "#ffd9b0"];
+
     function build() {
       var area = innerWidth * innerHeight;
-      var pCount = Math.max(28, Math.min(70, Math.round(area / 22000)));
-      var sCount = Math.max(40, Math.min(140, Math.round(area / 9000)));
+      // fewer GN particles (subtle Gundam nod), many more real-looking stars
+      var pCount = Math.max(12, Math.min(34, Math.round(area / 42000)));
+      var sCount = Math.max(120, Math.min(420, Math.round(area / 4200)));
       particles = [];
       stars = [];
       for (var i = 0; i < pCount; i++) {
         particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.25 * dpr,
-          vy: (Math.random() - 0.5) * 0.25 * dpr - 0.12 * dpr,
-          r: (Math.random() * 1.8 + 0.6) * dpr,
-          a: Math.random() * 0.5 + 0.25
+          vx: (Math.random() - 0.5) * 0.22 * dpr,
+          vy: (Math.random() - 0.5) * 0.22 * dpr - 0.10 * dpr,
+          r: (Math.random() * 1.6 + 0.5) * dpr,
+          a: Math.random() * 0.35 + 0.15
         });
       }
       for (var j = 0; j < sCount; j++) {
+        var bright = Math.random();
         stars.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          r: Math.random() * 1.1 * dpr + 0.2,
-          tw: Math.random() * Math.PI * 2
+          r: (bright > 0.94 ? Math.random() * 1.6 + 1.1 : Math.random() * 0.9 + 0.25) * dpr,
+          a: bright > 0.94 ? 0.9 : Math.random() * 0.55 + 0.25,
+          c: STAR_COLS[(Math.random() * STAR_COLS.length) | 0],
+          tw: Math.random() * Math.PI * 2,
+          tws: Math.random() * 0.018 + 0.004,
+          glow: bright > 0.94
         });
       }
     }
@@ -83,16 +92,18 @@
       var col = accent();
       var spd = ta ? 3.6 : 1;
 
-      // stars
+      // realistic twinkling starfield (varied colour, brightness, occasional glow)
       for (var s = 0; s < stars.length; s++) {
         var st = stars[s];
-        st.tw += 0.02;
-        var tw = (Math.sin(st.tw) + 1) * 0.5;
-        ctx.globalAlpha = 0.25 + tw * 0.5;
-        ctx.fillStyle = "#9fb6e0";
+        st.tw += st.tws;
+        var tw = 0.55 + 0.45 * Math.sin(st.tw);
+        ctx.globalAlpha = Math.min(1, st.a * tw);
+        ctx.fillStyle = st.c;
+        if (st.glow) { ctx.shadowColor = st.c; ctx.shadowBlur = st.r * 4; }
         ctx.beginPath();
         ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
         ctx.fill();
+        if (st.glow) ctx.shadowBlur = 0;
       }
 
       // GN particles + links
@@ -111,19 +122,22 @@
         ctx.fill();
         ctx.shadowBlur = 0;
 
-        for (var k = i + 1; k < particles.length; k++) {
-          var q = particles[k];
-          var dx = p.x - q.x, dy = p.y - q.y;
-          var dist = dx * dx + dy * dy;
-          var max = (130 * dpr) * (130 * dpr);
-          if (dist < max) {
-            ctx.globalAlpha = (1 - dist / max) * (ta ? 0.07 : 0.18);
-            ctx.strokeStyle = col;
-            ctx.lineWidth = 0.6 * dpr;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(q.x, q.y);
-            ctx.stroke();
+        // GN particle links only during Trans-Am (keep normal space realistic)
+        if (ta) {
+          for (var k = i + 1; k < particles.length; k++) {
+            var q = particles[k];
+            var dx = p.x - q.x, dy = p.y - q.y;
+            var dist = dx * dx + dy * dy;
+            var max = (130 * dpr) * (130 * dpr);
+            if (dist < max) {
+              ctx.globalAlpha = (1 - dist / max) * 0.09;
+              ctx.strokeStyle = col;
+              ctx.lineWidth = 0.6 * dpr;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(q.x, q.y);
+              ctx.stroke();
+            }
           }
         }
       }
@@ -396,7 +410,7 @@
   function initReveal() {
     if (reduceMotion || !("IntersectionObserver" in window)) return;
     var targets = document.querySelectorAll(
-      ".page__content h1, .paper-box, .page__content > ul, .page__content > p"
+      ".page__content h1, .paper-box, .page__content > ul, .page__content > p, .ms-card"
     );
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

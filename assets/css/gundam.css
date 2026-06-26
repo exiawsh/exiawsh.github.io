@@ -58,9 +58,14 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--g-space-0);
   background-image:
-    radial-gradient(1200px 700px at 80% -10%, rgba(45, 108, 255, 0.16), transparent 60%),
-    radial-gradient(1000px 600px at 0% 100%, rgba(47, 243, 207, 0.12), transparent 55%),
-    linear-gradient(180deg, var(--g-space-1), var(--g-space-0) 60%);
+    radial-gradient(1200px 700px at 80% -10%, rgba(45, 108, 255, 0.12), transparent 60%),
+    radial-gradient(1000px 600px at 0% 100%, rgba(47, 243, 207, 0.09), transparent 55%),
+    linear-gradient(180deg, rgba(4,6,13,0.74), rgba(4,6,13,0.88)),
+    url("../../images/space-bg.jpg");
+  background-size: auto, auto, auto, cover;
+  background-position: center, center, center, center;
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-repeat: no-repeat;
   color: var(--g-text);
   font-family: "Rajdhani", "Trebuchet MS", Helvetica, sans-serif;
   font-size: 17px;
@@ -70,9 +75,14 @@ body {
 
 body.trans-am {
   background-image:
-    radial-gradient(1200px 700px at 80% -10%, rgba(255, 59, 70, 0.20), transparent 60%),
+    radial-gradient(1200px 700px at 80% -10%, rgba(255, 59, 70, 0.22), transparent 60%),
     radial-gradient(1000px 600px at 0% 100%, rgba(255, 207, 63, 0.12), transparent 55%),
-    linear-gradient(180deg, #160709, #0a0204 60%);
+    linear-gradient(180deg, rgba(22,7,9,0.78), rgba(10,2,4,0.90)),
+    url("../../images/space-bg.jpg");
+  background-size: auto, auto, auto, cover;
+  background-position: center, center, center, center;
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-repeat: no-repeat;
 }
 
 /* faint engineering grid overlay across the whole page */
@@ -749,6 +759,66 @@ body.trans-am .ms-card { --ms-accent: var(--g-red); }
   text-shadow: none !important;
 }
 .ms-link:hover { color: var(--g-white) !important; background: transparent !important; }
+
+/* image-gallery variant: media is an <a> link to full-res, kill default link chrome */
+a.ms-media { display: block; }
+.ms-card a, a.ms-media {
+  border-bottom: none !important;
+  text-shadow: none !important;
+  background: transparent !important;
+}
+.ms-card a:hover { background: transparent !important; }
+
+/* era divider label (U.C. / C.E. / A.D.) */
+.ms-era {
+  --era: var(--g-accent);
+  display: flex; align-items: center; gap: 12px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  font-size: 1.02em; color: var(--g-white);
+  margin: 1.8em 0 0.2em;
+  padding: 8px 4px 8px 16px;
+  position: relative;
+}
+.ms-era::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 6px; height: 70%;
+  background: var(--era); box-shadow: 0 0 12px var(--era);
+}
+.ms-era::after {
+  content: ""; flex: 1 1 auto; height: 1px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--era) 60%, transparent), transparent);
+}
+.ms-era span {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.85em; letter-spacing: 3px;
+  color: #04060d; background: var(--era);
+  padding: 2px 9px; margin-right: 2px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 7px) 100%, 0 100%);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--era) 45%, transparent);
+}
+.ms-era em {
+  font-family: "Share Tech Mono", monospace;
+  font-style: normal; font-weight: 400;
+  font-size: 0.66em; letter-spacing: 1px; color: var(--g-dim);
+}
+.ms-era-uc   { --era: var(--g-yellow); }
+.ms-era-seed { --era: var(--g-red); }
+.ms-era-00   { --era: var(--g-gn); }
+body.trans-am .ms-era { --era: var(--g-red); }
+
+/* Zeon / Char machines: red accent even outside Trans-Am */
+.ms-card.ms-zeon { --ms-accent: var(--g-red); }
+
+/* credits / copyright note under the gallery */
+.ms-credits {
+  font-family: "Share Tech Mono", monospace !important;
+  font-size: 0.72em !important;
+  color: var(--g-dim2) !important;
+  letter-spacing: 0.4px;
+  margin: 1.1em 0 0 !important;
+  opacity: 0.8;
+}
 
 /* ==========================================================================
    TRANS-AM toggle button
