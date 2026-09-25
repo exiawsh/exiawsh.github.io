@@ -184,7 +184,7 @@ ICCV 2023
 
 <span class='anchor' id='internships'></span>
 # 💻 Internships
-- *2023.10 - 2025.01*, [NVIDIA](https://www.nvidia.com/en-us/research/), Beijing, China.  
+- *2023.10 - 2024.06*, [NVIDIA](https://www.nvidia.com/en-us/research/), Beijing, China.  
   - Research Intern, AV Applied Research Group. Contributed to Eagle VLM family, VideoITG, HydraMDP, OmniDrive, GR00T N1.5.
 - *2022.04 - 2023.07*, [MEGVII Technology](https://megvii.com/), Beijing, China.  
   - Research Intern, Foundation Model Group (PI: [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en)). Developed StreamPETR, Far3D, etc.
