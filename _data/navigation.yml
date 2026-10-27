@@ -1,0 +1,25 @@
+# main links links
+main:
+  - title: "News"
+    url: "#news"
+
+  - title: "Selected Work"
+    url: "#featured"
+
+  - title: "Publications"
+    url: "#publications"
+
+  - title: "Experience"
+    url: "#experience"
+
+  - title: "Awards"
+    url: "#honors-and-awards"
+
+  - title: "Education"
+    url: "#educations"
+
+  - title: "Talks"
+    url: "#invited-talks"
+
+  - title: "Services"
+    url: "#services"
